@@ -33,8 +33,7 @@ class Document: NSDocument {
             Swift.print("no file")
             return
         }
-        
-        
+        // load player
         let assetURL = AVAsset(url: fileURL)
         let aspectRatio = assetURL.tracks[0].naturalSize
         let playerItem = AVPlayerItem(asset: assetURL)
@@ -43,23 +42,23 @@ class Document: NSDocument {
         guard let window = windowController.window else {
             return
         }
-        
+        guard let screen = window.screen else {
+            return
+        }
+
         window.aspectRatio = aspectRatio
-        let scale = min(window.screen!.frame.size.width/aspectRatio.width,
-                        window.screen!.frame.size.height/aspectRatio.height)
-        let size = CGSize(width: aspectRatio.width * scale,
-                          height: aspectRatio.height * scale)
-        window.setContentSize(size)
         
+        let pointSize = CGSize(width: aspectRatio.width/screen.backingScaleFactor,
+                               height: aspectRatio.height/screen.backingScaleFactor)
+        let screenSize = screen.frame.size
+        let scale = min(screenSize.width/pointSize.width,
+                        screenSize.height/pointSize.height,
+                        1)
+        let contentSize = CGSize(width: pointSize.width * scale,
+                                 height: pointSize.height * scale)
+
+        window.setContentSize(contentSize)
         
-//        window.titleVisibility = NSWindowTitleVisibility.hidden
-//        window.titlebarAppearsTransparent = true
-//        window.appearance = NSAppearance(named: NSAppearanceNameVibrantDark)
-//        window.styleMask = [.fullSizeContentView, .titled, .resizable, .borderless]
-        
-//        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) {
-//            window.styleMask = [.fullSizeContentView, .resizable, .borderless]
-//        }
         
 //        if !window.styleMask.contains(NSWindowStyleMask.fullScreen) {
 //            window.toggleFullScreen(nil)

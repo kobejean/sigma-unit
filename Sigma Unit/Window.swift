@@ -30,9 +30,9 @@ class Window: NSWindow {
         }
         set {
             super.contentView = newValue
-            self.contentView?.wantsLayer = true
-            self.contentView?.layer!.cornerRadius = 5.0
-            self.contentView?.layer!.masksToBounds = true
+//            self.contentView?.wantsLayer = true
+//            self.contentView?.layer!.cornerRadius = 5.0
+//            self.contentView?.layer!.masksToBounds = true
         }
     }
     
