@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D0BC2EE1F08C47A000E3541 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0BC2ED1F08C47A000E3541 /* Document.swift */; };
 		3DF1094F1F08448600B1259C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF1094E1F08448600B1259C /* AppDelegate.swift */; };
 		3DF109511F08448600B1259C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF109501F08448600B1259C /* ViewController.swift */; };
 		3DF109531F08448600B1259C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DF109521F08448600B1259C /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D0BC2ED1F08C47A000E3541 /* Document.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		3DF1094B1F08448600B1259C /* Sehen Unit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sehen Unit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DF1094E1F08448600B1259C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DF109501F08448600B1259C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				3DF1094E1F08448600B1259C /* AppDelegate.swift */,
 				3DF109501F08448600B1259C /* ViewController.swift */,
+				3D0BC2ED1F08C47A000E3541 /* Document.swift */,
 				3DF109521F08448600B1259C /* Assets.xcassets */,
 				3DF109541F08448600B1259C /* Main.storyboard */,
 				3DF109571F08448600B1259C /* Info.plist */,
@@ -146,6 +149,7 @@
 			files = (
 				3DF109511F08448600B1259C /* ViewController.swift in Sources */,
 				3DF1094F1F08448600B1259C /* AppDelegate.swift in Sources */,
+				3D0BC2EE1F08C47A000E3541 /* Document.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +302,7 @@
 				3DF1095C1F08448600B1259C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

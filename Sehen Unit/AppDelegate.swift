@@ -16,9 +16,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         super.init()
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
         self.windowController = storyboard.instantiateController(withIdentifier: "WindowController") as! NSWindowController
-//        self.windowController.window?.toggleFullScreen(nil)
+        
         print("init")
-//        self.windowController.window?.makeKeyAndOrderFront(nil)
+        
     }
 
     func applicationWillFinishLaunching(_ aNotification: Notification) {
@@ -63,9 +63,38 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let viewController = windowController.contentViewController as! ViewController
         viewController.loadFile(filepath)
         
-        self.windowController.showWindow(self)
-        self.windowController.window?.toggleFullScreen(nil)
+        guard let window = self.windowController.window else {return}
         
+        self.windowController.showWindow(self)
+        
+        if !window.styleMask.contains(NSWindowStyleMask.fullScreen) {
+            window.toggleFullScreen(nil)
+        }
+        
+    }
+    
+    @IBAction func openFile(_ sender: Any) {
+        let viewController = windowController.contentViewController as! ViewController
+        let panel = NSOpenPanel()
+        panel.allowedFileTypes = ["mp4", "mov"]
+        
+        panel.begin { (result) in
+            guard let fileURL = panel.url else { return }
+            
+            viewController.loadFile(fileURL)
+            
+            guard let window = self.windowController.window else {return}
+            
+            self.windowController.showWindow(self)
+            window.titleVisibility = NSWindowTitleVisibility.hidden
+            window.titlebarAppearsTransparent = true
+            window.appearance = NSAppearance(named: NSAppearanceNameVibrantDark)
+            
+            if !window.styleMask.contains(NSWindowStyleMask.fullScreen) {
+                window.toggleFullScreen(nil)
+            }
+        }
+
     }
 
 }

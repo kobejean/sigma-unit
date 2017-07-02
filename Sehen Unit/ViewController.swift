@@ -15,7 +15,6 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
         
         // sehen://send?filepath=/Users/kobejean/Code/Git/tf-image-kit/docs/media/kmeans_flower_1856x1392_k16_wx5.0_wy5.0.mp4
