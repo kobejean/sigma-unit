@@ -11,6 +11,7 @@
 		3DF109511F08448600B1259C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF109501F08448600B1259C /* ViewController.swift */; };
 		3DF109531F08448600B1259C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DF109521F08448600B1259C /* Assets.xcassets */; };
 		3DF109561F08448600B1259C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DF109541F08448600B1259C /* Main.storyboard */; };
+		3DF1095F1F08483700B1259C /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF1095E1F08483700B1259C /* AVKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		3DF109521F08448600B1259C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DF109551F08448600B1259C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DF109571F08448600B1259C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DF1095E1F08483700B1259C /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DF1095F1F08483700B1259C /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +41,7 @@
 			children = (
 				3DF1094D1F08448600B1259C /* Sehen Unit */,
 				3DF1094C1F08448600B1259C /* Products */,
+				3DF1095D1F08483700B1259C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +63,14 @@
 				3DF109571F08448600B1259C /* Info.plist */,
 			);
 			path = "Sehen Unit";
+			sourceTree = "<group>";
+		};
+		3DF1095D1F08483700B1259C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DF1095E1F08483700B1259C /* AVKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
