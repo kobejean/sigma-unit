@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Sehen Unit
+//  Sigma Unit
 //
 //  Created by Jean Flaherty on 7/1/17.
 //  Copyright © 2017 kobejean. All rights reserved.
@@ -10,19 +10,12 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-    var windowController: NSWindowController!
     
     override init(){
         super.init()
-        let storyboard = NSStoryboard(name: "Main", bundle: nil)
-        self.windowController = storyboard.instantiateController(withIdentifier: "WindowController") as! NSWindowController
-        
-        print("init")
-        
     }
 
     func applicationWillFinishLaunching(_ aNotification: Notification) {
-        print("applicationWillFinishLaunching")
         // Insert code here to initialize your application
         let appleEventManager: NSAppleEventManager = NSAppleEventManager.shared()
         appleEventManager.setEventHandler(self,
@@ -40,7 +33,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             print("Error reading event:", event)
             return
         }
-        print("handleGetURLEvent")
         
         let url = URL(string: path)
         let query = url?.query
@@ -57,44 +49,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         print("pairs", pairs)
         
         guard let filepathString = pairs["filepath"] else{ return }
-        let filepath = URL(fileURLWithPath:filepathString)
+        let fileURL = URL(fileURLWithPath:filepathString)
+        print(fileURL)
         
-        print(filepath)
-        let viewController = windowController.contentViewController as! ViewController
-        viewController.loadFile(filepath)
-        
-        guard let window = self.windowController.window else {return}
-        
-        self.windowController.showWindow(self)
-        
-        if !window.styleMask.contains(NSWindowStyleMask.fullScreen) {
-            window.toggleFullScreen(nil)
+        let sharedDocumentController = NSDocumentController.shared()
+        sharedDocumentController.openDocument(withContentsOf: fileURL, display: true){ document, alreadyOpen, error in
+            print(document ?? "no document")
+            print("already open: ", alreadyOpen)
+            
+            guard let error = error else { return }
+            let alert = NSAlert(error: error)
+            alert.addButton(withTitle: "OK")
+            alert.runModal()
         }
-        
-    }
-    
-    @IBAction func openFile(_ sender: Any) {
-        let viewController = windowController.contentViewController as! ViewController
-        let panel = NSOpenPanel()
-        panel.allowedFileTypes = ["mp4", "mov"]
-        
-        panel.begin { (result) in
-            guard let fileURL = panel.url else { return }
-            
-            viewController.loadFile(fileURL)
-            
-            guard let window = self.windowController.window else {return}
-            
-            self.windowController.showWindow(self)
-            window.titleVisibility = NSWindowTitleVisibility.hidden
-            window.titlebarAppearsTransparent = true
-            window.appearance = NSAppearance(named: NSAppearanceNameVibrantDark)
-            
-            if !window.styleMask.contains(NSWindowStyleMask.fullScreen) {
-                window.toggleFullScreen(nil)
-            }
-        }
-
     }
 
 }

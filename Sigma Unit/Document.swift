@@ -1,12 +1,13 @@
 //
 //  Document.swift
-//  Sehen Unit
+//  Sigma Unit
 //
 //  Created by Jean Flaherty on 7/2/17.
 //  Copyright © 2017 kobejean. All rights reserved.
 //
 
 import Cocoa
+import AVFoundation
 
 class Document: NSDocument {
     var viewController: ViewController!
@@ -33,18 +34,36 @@ class Document: NSDocument {
             return
         }
         
-        viewController.loadFile(fileURL)
+        
+        let assetURL = AVAsset(url: fileURL)
+        let aspectRatio = assetURL.tracks[0].naturalSize
+        let playerItem = AVPlayerItem(asset: assetURL)
+        viewController.loadPlayerItem(playerItem)
         
         guard let window = windowController.window else {
             return
         }
         
-        window.titleVisibility = NSWindowTitleVisibility.hidden
-        window.titlebarAppearsTransparent = true
-        window.appearance = NSAppearance(named: NSAppearanceNameVibrantDark)
-        if !window.styleMask.contains(NSWindowStyleMask.fullScreen) {
-            window.toggleFullScreen(nil)
-        }
+        window.aspectRatio = aspectRatio
+        let scale = min(window.screen!.frame.size.width/aspectRatio.width,
+                        window.screen!.frame.size.height/aspectRatio.height)
+        let size = CGSize(width: aspectRatio.width * scale,
+                          height: aspectRatio.height * scale)
+        window.setContentSize(size)
+        
+        
+//        window.titleVisibility = NSWindowTitleVisibility.hidden
+//        window.titlebarAppearsTransparent = true
+//        window.appearance = NSAppearance(named: NSAppearanceNameVibrantDark)
+//        window.styleMask = [.fullSizeContentView, .titled, .resizable, .borderless]
+        
+//        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) {
+//            window.styleMask = [.fullSizeContentView, .resizable, .borderless]
+//        }
+        
+//        if !window.styleMask.contains(NSWindowStyleMask.fullScreen) {
+//            window.toggleFullScreen(nil)
+//        }
     }
     
     override func data(ofType typeName: String) throws -> Data {

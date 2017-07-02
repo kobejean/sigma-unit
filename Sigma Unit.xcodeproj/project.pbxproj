@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D0BC2EE1F08C47A000E3541 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0BC2ED1F08C47A000E3541 /* Document.swift */; };
+		3DE0899F1F0970C40036F409 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE0899E1F0970C40036F409 /* Window.swift */; };
 		3DF1094F1F08448600B1259C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF1094E1F08448600B1259C /* AppDelegate.swift */; };
 		3DF109511F08448600B1259C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF109501F08448600B1259C /* ViewController.swift */; };
 		3DF109531F08448600B1259C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DF109521F08448600B1259C /* Assets.xcassets */; };
@@ -17,7 +18,8 @@
 
 /* Begin PBXFileReference section */
 		3D0BC2ED1F08C47A000E3541 /* Document.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
-		3DF1094B1F08448600B1259C /* Sehen Unit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sehen Unit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DE0899E1F0970C40036F409 /* Window.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
+		3DF1094B1F08448600B1259C /* Sigma Unit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sigma Unit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DF1094E1F08448600B1259C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DF109501F08448600B1259C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3DF109521F08448600B1259C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,7 +43,7 @@
 		3DF109421F08448500B1259C = {
 			isa = PBXGroup;
 			children = (
-				3DF1094D1F08448600B1259C /* Sehen Unit */,
+				3DF1094D1F08448600B1259C /* Sigma Unit */,
 				3DF1094C1F08448600B1259C /* Products */,
 				3DF1095D1F08483700B1259C /* Frameworks */,
 			);
@@ -50,22 +52,23 @@
 		3DF1094C1F08448600B1259C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3DF1094B1F08448600B1259C /* Sehen Unit.app */,
+				3DF1094B1F08448600B1259C /* Sigma Unit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3DF1094D1F08448600B1259C /* Sehen Unit */ = {
+		3DF1094D1F08448600B1259C /* Sigma Unit */ = {
 			isa = PBXGroup;
 			children = (
 				3DF1094E1F08448600B1259C /* AppDelegate.swift */,
 				3DF109501F08448600B1259C /* ViewController.swift */,
 				3D0BC2ED1F08C47A000E3541 /* Document.swift */,
+				3DE0899E1F0970C40036F409 /* Window.swift */,
 				3DF109521F08448600B1259C /* Assets.xcassets */,
 				3DF109541F08448600B1259C /* Main.storyboard */,
 				3DF109571F08448600B1259C /* Info.plist */,
 			);
-			path = "Sehen Unit";
+			path = "Sigma Unit";
 			sourceTree = "<group>";
 		};
 		3DF1095D1F08483700B1259C /* Frameworks */ = {
@@ -79,9 +82,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3DF1094A1F08448600B1259C /* Sehen Unit */ = {
+		3DF1094A1F08448600B1259C /* Sigma Unit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3DF1095A1F08448600B1259C /* Build configuration list for PBXNativeTarget "Sehen Unit" */;
+			buildConfigurationList = 3DF1095A1F08448600B1259C /* Build configuration list for PBXNativeTarget "Sigma Unit" */;
 			buildPhases = (
 				3DF109471F08448600B1259C /* Sources */,
 				3DF109481F08448600B1259C /* Frameworks */,
@@ -91,9 +94,9 @@
 			);
 			dependencies = (
 			);
-			name = "Sehen Unit";
-			productName = "Sehen Unit";
-			productReference = 3DF1094B1F08448600B1259C /* Sehen Unit.app */;
+			name = "Sigma Unit";
+			productName = "Sigma Unit";
+			productReference = 3DF1094B1F08448600B1259C /* Sigma Unit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -112,7 +115,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3DF109461F08448500B1259C /* Build configuration list for PBXProject "Sehen Unit" */;
+			buildConfigurationList = 3DF109461F08448500B1259C /* Build configuration list for PBXProject "Sigma Unit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -125,7 +128,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3DF1094A1F08448600B1259C /* Sehen Unit */,
+				3DF1094A1F08448600B1259C /* Sigma Unit */,
 			);
 		};
 /* End PBXProject section */
@@ -150,6 +153,7 @@
 				3DF109511F08448600B1259C /* ViewController.swift in Sources */,
 				3DF1094F1F08448600B1259C /* AppDelegate.swift in Sources */,
 				3D0BC2EE1F08C47A000E3541 /* Document.swift in Sources */,
+				3DE0899F1F0970C40036F409 /* Window.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +266,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Sehen Unit/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sigma Unit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "kobejean.Sehen-Unit";
+				PRODUCT_BUNDLE_IDENTIFIER = "kobejean.sigma-unit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -275,9 +279,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Sehen Unit/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sigma Unit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "kobejean.Sehen-Unit";
+				PRODUCT_BUNDLE_IDENTIFIER = "kobejean.sigma-unit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -286,7 +290,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3DF109461F08448500B1259C /* Build configuration list for PBXProject "Sehen Unit" */ = {
+		3DF109461F08448500B1259C /* Build configuration list for PBXProject "Sigma Unit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3DF109581F08448600B1259C /* Debug */,
@@ -295,7 +299,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3DF1095A1F08448600B1259C /* Build configuration list for PBXNativeTarget "Sehen Unit" */ = {
+		3DF1095A1F08448600B1259C /* Build configuration list for PBXNativeTarget "Sigma Unit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3DF1095B1F08448600B1259C /* Debug */,

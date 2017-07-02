@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3DF1094A1F08448600B1259C"
-               BuildableName = "Sehen Unit.app"
-               BlueprintName = "Sehen Unit"
-               ReferencedContainer = "container:Sehen Unit.xcodeproj">
+               BuildableName = "Sigma Unit.app"
+               BlueprintName = "Sigma Unit"
+               ReferencedContainer = "container:Sigma Unit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3DF1094A1F08448600B1259C"
-            BuildableName = "Sehen Unit.app"
-            BlueprintName = "Sehen Unit"
-            ReferencedContainer = "container:Sehen Unit.xcodeproj">
+            BuildableName = "Sigma Unit.app"
+            BlueprintName = "Sigma Unit"
+            ReferencedContainer = "container:Sigma Unit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3DF1094A1F08448600B1259C"
-            BuildableName = "Sehen Unit.app"
-            BlueprintName = "Sehen Unit"
-            ReferencedContainer = "container:Sehen Unit.xcodeproj">
+            BuildableName = "Sigma Unit.app"
+            BlueprintName = "Sigma Unit"
+            ReferencedContainer = "container:Sigma Unit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3DF1094A1F08448600B1259C"
-            BuildableName = "Sehen Unit.app"
-            BlueprintName = "Sehen Unit"
-            ReferencedContainer = "container:Sehen Unit.xcodeproj">
+            BuildableName = "Sigma Unit.app"
+            BlueprintName = "Sigma Unit"
+            ReferencedContainer = "container:Sigma Unit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
