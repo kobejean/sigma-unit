@@ -71,7 +71,6 @@
 		3D0D335B1F0FF1B9001F1566 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		3D0D33E61F102825001F1566 /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		3D11FE8E1F106B9C006689BE /* FSEventsUnofficialWrapper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FSEventsUnofficialWrapper.xcodeproj; path = "fsevents-unofficial-wrapper/FSEventsUnofficialWrapper.xcodeproj"; sourceTree = "<group>"; };
-		3D3D45C71F10589500FD20D7 /* FSEventsUnofficialWrapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FSEventsUnofficialWrapper.framework; path = "../../../Library/Developer/Xcode/DerivedData/FSEventsUnofficialWrapper-ecwavbyyglvvhzftrahhtokzblaw/Build/Products/Debug/FSEventsUnofficialWrapper.framework"; sourceTree = "<group>"; };
 		3DE0899E1F0970C40036F409 /* Window.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		3DF1094B1F08448600B1259C /* Sigma Unit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sigma Unit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DF1094E1F08448600B1259C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -145,7 +144,6 @@
 		3DF1095D1F08483700B1259C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3D3D45C71F10589500FD20D7 /* FSEventsUnofficialWrapper.framework */,
 				3D0D335B1F0FF1B9001F1566 /* CoreServices.framework */,
 				3D0D33591F0FF057001F1566 /* Quartz.framework */,
 				3D0D33571F0FF04E001F1566 /* AVFoundation.framework */,
