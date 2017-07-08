@@ -9,7 +9,7 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "AB37B63C-EE99-4C04-96EE-FB5727B10CF6",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "6C7471C92E88044E76FD4030CC9A053817FA9390" : "Examples\/fsevents-unofficial-wrapper\/",
+    "6C7471C92E88044E76FD4030CC9A053817FA9390" : "sigma-unit\/fsevents-unofficial-wrapper\/",
     "1FCC02D83FC1E8420D501419EC59F681BBD1FC90" : "sigma-unit\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Sigma Unit",

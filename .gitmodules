@@ -1,3 +1,4 @@
 [submodule "fsevents-unofficial-wrapper"]
 	path = fsevents-unofficial-wrapper
 	url = https://github.com/kobejean/fsevents-unofficial-wrapper.git
+    ignore = dirty
