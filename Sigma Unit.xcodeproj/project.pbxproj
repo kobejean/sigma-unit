@@ -7,21 +7,75 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D0BC2EE1F08C47A000E3541 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0BC2ED1F08C47A000E3541 /* Document.swift */; };
+		3D0BC2EE1F08C47A000E3541 /* MovieDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0BC2ED1F08C47A000E3541 /* MovieDocument.swift */; };
+		3D0D33541F0FED76001F1566 /* FolderDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0D33531F0FED76001F1566 /* FolderDocument.swift */; };
+		3D0D33561F0FEDFC001F1566 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0D33551F0FEDFC001F1566 /* PictureViewController.swift */; };
+		3D0D33581F0FF04E001F1566 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0D33571F0FF04E001F1566 /* AVFoundation.framework */; };
+		3D0D335A1F0FF057001F1566 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0D33591F0FF057001F1566 /* Quartz.framework */; };
+		3D0D335C1F0FF1B9001F1566 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0D335B1F0FF1B9001F1566 /* CoreServices.framework */; };
+		3D0D33E71F102825001F1566 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0D33E61F102825001F1566 /* CustomImageView.swift */; };
+		3D11FE981F106BE6006689BE /* FSEventsUnofficialWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D11FE941F106B9C006689BE /* FSEventsUnofficialWrapper.framework */; };
+		3D11FE991F106BE6006689BE /* FSEventsUnofficialWrapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3D11FE941F106B9C006689BE /* FSEventsUnofficialWrapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3DE0899F1F0970C40036F409 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE0899E1F0970C40036F409 /* Window.swift */; };
 		3DF1094F1F08448600B1259C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF1094E1F08448600B1259C /* AppDelegate.swift */; };
-		3DF109511F08448600B1259C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF109501F08448600B1259C /* ViewController.swift */; };
+		3DF109511F08448600B1259C /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF109501F08448600B1259C /* MovieViewController.swift */; };
 		3DF109531F08448600B1259C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DF109521F08448600B1259C /* Assets.xcassets */; };
 		3DF109561F08448600B1259C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DF109541F08448600B1259C /* Main.storyboard */; };
 		3DF1095F1F08483700B1259C /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF1095E1F08483700B1259C /* AVKit.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3D11FE931F106B9C006689BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D11FE8E1F106B9C006689BE /* FSEventsUnofficialWrapper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = OBJ_21;
+			remoteInfo = FSEventsUnofficialWrapper;
+		};
+		3D11FE951F106B9C006689BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D11FE8E1F106B9C006689BE /* FSEventsUnofficialWrapper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = OBJ_22;
+			remoteInfo = FSEventStreamWrapperTests;
+		};
+		3D11FE9A1F106BE6006689BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D11FE8E1F106B9C006689BE /* FSEventsUnofficialWrapper.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_23;
+			remoteInfo = FSEventsUnofficialWrapper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3D11FE9C1F106BE7006689BE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3D11FE991F106BE6006689BE /* FSEventsUnofficialWrapper.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		3D0BC2ED1F08C47A000E3541 /* Document.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		3D0BC2ED1F08C47A000E3541 /* MovieDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDocument.swift; sourceTree = "<group>"; };
+		3D0D33531F0FED76001F1566 /* FolderDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderDocument.swift; sourceTree = "<group>"; };
+		3D0D33551F0FEDFC001F1566 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
+		3D0D33571F0FF04E001F1566 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3D0D33591F0FF057001F1566 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		3D0D335B1F0FF1B9001F1566 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		3D0D33E61F102825001F1566 /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		3D11FE8E1F106B9C006689BE /* FSEventsUnofficialWrapper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FSEventsUnofficialWrapper.xcodeproj; path = "fsevents-unofficial-wrapper/FSEventsUnofficialWrapper.xcodeproj"; sourceTree = "<group>"; };
+		3D3D45C71F10589500FD20D7 /* FSEventsUnofficialWrapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FSEventsUnofficialWrapper.framework; path = "../../../Library/Developer/Xcode/DerivedData/FSEventsUnofficialWrapper-ecwavbyyglvvhzftrahhtokzblaw/Build/Products/Debug/FSEventsUnofficialWrapper.framework"; sourceTree = "<group>"; };
 		3DE0899E1F0970C40036F409 /* Window.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		3DF1094B1F08448600B1259C /* Sigma Unit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sigma Unit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DF1094E1F08448600B1259C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3DF109501F08448600B1259C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3DF109501F08448600B1259C /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		3DF109521F08448600B1259C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DF109551F08448600B1259C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DF109571F08448600B1259C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -33,6 +87,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D0D335C1F0FF1B9001F1566 /* CoreServices.framework in Frameworks */,
+				3D0D335A1F0FF057001F1566 /* Quartz.framework in Frameworks */,
+				3D0D33581F0FF04E001F1566 /* AVFoundation.framework in Frameworks */,
+				3D11FE981F106BE6006689BE /* FSEventsUnofficialWrapper.framework in Frameworks */,
 				3DF1095F1F08483700B1259C /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -40,9 +98,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D11FE8F1F106B9C006689BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D11FE941F106B9C006689BE /* FSEventsUnofficialWrapper.framework */,
+				3D11FE961F106B9C006689BE /* FSEventStreamWrapperTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		3DF109421F08448500B1259C = {
 			isa = PBXGroup;
 			children = (
+				3D11FE8E1F106B9C006689BE /* FSEventsUnofficialWrapper.xcodeproj */,
 				3DF1094D1F08448600B1259C /* Sigma Unit */,
 				3DF1094C1F08448600B1259C /* Products */,
 				3DF1095D1F08483700B1259C /* Frameworks */,
@@ -61,8 +129,11 @@
 			isa = PBXGroup;
 			children = (
 				3DF1094E1F08448600B1259C /* AppDelegate.swift */,
-				3DF109501F08448600B1259C /* ViewController.swift */,
-				3D0BC2ED1F08C47A000E3541 /* Document.swift */,
+				3DF109501F08448600B1259C /* MovieViewController.swift */,
+				3D0D33551F0FEDFC001F1566 /* PictureViewController.swift */,
+				3D0BC2ED1F08C47A000E3541 /* MovieDocument.swift */,
+				3D0D33531F0FED76001F1566 /* FolderDocument.swift */,
+				3D0D33E61F102825001F1566 /* CustomImageView.swift */,
 				3DE0899E1F0970C40036F409 /* Window.swift */,
 				3DF109521F08448600B1259C /* Assets.xcassets */,
 				3DF109541F08448600B1259C /* Main.storyboard */,
@@ -74,6 +145,10 @@
 		3DF1095D1F08483700B1259C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3D3D45C71F10589500FD20D7 /* FSEventsUnofficialWrapper.framework */,
+				3D0D335B1F0FF1B9001F1566 /* CoreServices.framework */,
+				3D0D33591F0FF057001F1566 /* Quartz.framework */,
+				3D0D33571F0FF04E001F1566 /* AVFoundation.framework */,
 				3DF1095E1F08483700B1259C /* AVKit.framework */,
 			);
 			name = Frameworks;
@@ -89,10 +164,12 @@
 				3DF109471F08448600B1259C /* Sources */,
 				3DF109481F08448600B1259C /* Frameworks */,
 				3DF109491F08448600B1259C /* Resources */,
+				3D11FE9C1F106BE7006689BE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3D11FE9B1F106BE6006689BE /* PBXTargetDependency */,
 			);
 			name = "Sigma Unit";
 			productName = "Sigma Unit";
@@ -126,12 +203,35 @@
 			mainGroup = 3DF109421F08448500B1259C;
 			productRefGroup = 3DF1094C1F08448600B1259C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3D11FE8F1F106B9C006689BE /* Products */;
+					ProjectRef = 3D11FE8E1F106B9C006689BE /* FSEventsUnofficialWrapper.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3DF1094A1F08448600B1259C /* Sigma Unit */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3D11FE941F106B9C006689BE /* FSEventsUnofficialWrapper.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FSEventsUnofficialWrapper.framework;
+			remoteRef = 3D11FE931F106B9C006689BE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3D11FE961F106B9C006689BE /* FSEventStreamWrapperTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = file;
+			path = FSEventStreamWrapperTests.xctest;
+			remoteRef = 3D11FE951F106B9C006689BE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3DF109491F08448600B1259C /* Resources */ = {
@@ -150,14 +250,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DF109511F08448600B1259C /* ViewController.swift in Sources */,
+				3DF109511F08448600B1259C /* MovieViewController.swift in Sources */,
+				3D0D33561F0FEDFC001F1566 /* PictureViewController.swift in Sources */,
 				3DF1094F1F08448600B1259C /* AppDelegate.swift in Sources */,
-				3D0BC2EE1F08C47A000E3541 /* Document.swift in Sources */,
+				3D0D33E71F102825001F1566 /* CustomImageView.swift in Sources */,
+				3D0BC2EE1F08C47A000E3541 /* MovieDocument.swift in Sources */,
 				3DE0899F1F0970C40036F409 /* Window.swift in Sources */,
+				3D0D33541F0FED76001F1566 /* FolderDocument.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3D11FE9B1F106BE6006689BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FSEventsUnofficialWrapper;
+			targetProxy = 3D11FE9A1F106BE6006689BE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3DF109541F08448600B1259C /* Main.storyboard */ = {
@@ -264,6 +375,7 @@
 		3DF1095B1F08448600B1259C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Sigma Unit/Info.plist";
@@ -277,6 +389,7 @@
 		3DF1095C1F08448600B1259C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Sigma Unit/Info.plist";

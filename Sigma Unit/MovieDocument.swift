@@ -1,5 +1,5 @@
 //
-//  Document.swift
+//  MovieDocument.swift
 //  Sigma Unit
 //
 //  Created by Jean Flaherty on 7/2/17.
@@ -9,12 +9,12 @@
 import Cocoa
 import AVFoundation
 
-class Document: NSDocument {
-    var viewController: ViewController!
+class MovieDocument: NSDocument {
+    var viewController: MovieViewController!
     
     override init() {
         super.init()
-        
+        Swift.print("MovieWindowController init")
         // Add your subclass-specific initialization here.
     }
     
@@ -25,10 +25,10 @@ class Document: NSDocument {
     override func makeWindowControllers() {
         // Returns the Storyboard that contains your Document window.
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
-        let windowController = storyboard.instantiateController(withIdentifier: "WindowController") as! NSWindowController
+        let windowController = storyboard.instantiateController(withIdentifier: "MovieWindowController") as! NSWindowController
         self.addWindowController(windowController)
-        viewController = windowController.contentViewController as! ViewController
-        
+        viewController = windowController.contentViewController as! MovieViewController
+
         guard let fileURL = self.fileURL else {
             Swift.print("no file")
             return
@@ -59,10 +59,6 @@ class Document: NSDocument {
 
         window.setContentSize(contentSize)
         
-        
-//        if !window.styleMask.contains(NSWindowStyleMask.fullScreen) {
-//            window.toggleFullScreen(nil)
-//        }
     }
     
     override func data(ofType typeName: String) throws -> Data {

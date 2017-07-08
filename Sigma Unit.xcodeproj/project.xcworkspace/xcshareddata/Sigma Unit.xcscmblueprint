@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1FCC02D83FC1E8420D501419EC59F681BBD1FC90",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6C7471C92E88044E76FD4030CC9A053817FA9390" : 9223372036854775807,
+    "1FCC02D83FC1E8420D501419EC59F681BBD1FC90" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "AB37B63C-EE99-4C04-96EE-FB5727B10CF6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6C7471C92E88044E76FD4030CC9A053817FA9390" : "Examples\/fsevents-unofficial-wrapper\/",
+    "1FCC02D83FC1E8420D501419EC59F681BBD1FC90" : "sigma-unit\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Sigma Unit",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Sigma Unit.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kobejean\/sigma-unit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1FCC02D83FC1E8420D501419EC59F681BBD1FC90"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/eonil\/fsevents-unofficial-wrapper.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6C7471C92E88044E76FD4030CC9A053817FA9390"
+    }
+  ]
+}

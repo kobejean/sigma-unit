@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MovieViewController.swift
 //  Sigma Unit
 //
 //  Created by Jean Flaherty on 7/1/17.
@@ -10,7 +10,7 @@ import Cocoa
 import AVKit
 import AVFoundation
 
-class ViewController: NSViewController {
+class MovieViewController: NSViewController {
     @IBOutlet var playerView: AVPlayerView!
 
     override func viewDidLoad() {
