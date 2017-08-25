@@ -28,7 +28,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
     
-    func handleGetURLEvent(_ event:NSAppleEventDescriptor, replyEvent:NSAppleEventDescriptor) {
+    @objc func handleGetURLEvent(_ event:NSAppleEventDescriptor, replyEvent:NSAppleEventDescriptor) {
         guard let path = event.paramDescriptor(forKeyword: keyDirectObject)!.stringValue else {
             print("Error reading event:", event)
             return
@@ -52,7 +52,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let fileURL = URL(fileURLWithPath:filepathString)
         print(fileURL)
         
-        let sharedDocumentController = NSDocumentController.shared()
+        let sharedDocumentController = NSDocumentController.shared
         sharedDocumentController.openDocument(withContentsOf: fileURL, display: true){ document, alreadyOpen, error in
             print(document ?? "no document")
             print("already open: ", alreadyOpen)

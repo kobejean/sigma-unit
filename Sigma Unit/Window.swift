@@ -12,8 +12,8 @@ class Window: NSWindow, NSWindowDelegate {
 
     // instance variables
     override var appearance: NSAppearance? {
-        get { return NSAppearance(named: NSAppearanceNameVibrantDark)}
-        set { super.appearance = NSAppearance(named: NSAppearanceNameVibrantDark) }
+        get { return NSAppearance(named: NSAppearance.Name.vibrantDark)}
+        set { super.appearance = NSAppearance(named: NSAppearance.Name.vibrantDark) }
     }
     
     override var canBecomeKey: Bool {
@@ -29,7 +29,7 @@ class Window: NSWindow, NSWindowDelegate {
         set { super.contentView = newValue }
     }
     override var acceptsFirstResponder: Bool { return true }
-    var isFullscreen: Bool { return self.styleMask.contains(.fullScreen) }
+    var isFullscreen: Bool { return self.styleMask.contains(NSWindow.StyleMask.fullScreen) }
     var trackingArea: NSTrackingArea!
     var titleBarHidden: Bool {
         guard let view = self.standardWindowButtonSuperView() else {
@@ -39,11 +39,11 @@ class Window: NSWindow, NSWindowDelegate {
     }
 
     // constructor
-    override init(contentRect: NSRect, styleMask: NSWindowStyleMask, backing: NSBackingStoreType, defer aDefer: Bool){
+    override init(contentRect: NSRect, styleMask: NSWindow.StyleMask, backing: NSWindow.BackingStoreType, defer aDefer: Bool){
         super.init(contentRect: contentRect, styleMask: styleMask, backing: backing, defer: aDefer)
-        super.appearance = NSAppearance(named: NSAppearanceNameVibrantDark)
+        super.appearance = NSAppearance(named: NSAppearance.Name.vibrantDark)
         self.isMovableByWindowBackground = true
-        self.titleVisibility = NSWindowTitleVisibility.hidden
+        self.titleVisibility = NSWindow.TitleVisibility.hidden
         self.setTitleBarHidden(hidden: true, animated: false)
         self.updateTrackingAreas()
         self.delegate = self
@@ -79,7 +79,7 @@ class Window: NSWindow, NSWindowDelegate {
             titlebar.removeTrackingArea(self.trackingArea)
         }
         self.trackingArea = NSTrackingArea(rect: trackingRect,
-                                           options: [.mouseEnteredAndExited, .activeInKeyWindow, .activeAlways],
+                                           options: [NSTrackingArea.Options.mouseEnteredAndExited, NSTrackingArea.Options.activeInKeyWindow, NSTrackingArea.Options.activeAlways],
                                            owner: self,
                                            userInfo: nil)
         titlebar.addTrackingArea(self.trackingArea)
@@ -112,7 +112,7 @@ class Window: NSWindow, NSWindowDelegate {
 
     func standardWindowButtonSuperView() -> NSView? {
         //http://stackoverflow.com/a/28381918
-        return standardWindowButton(NSWindowButton.zoomButton)?.superview
+        return standardWindowButton(NSWindow.ButtonType.zoomButton)?.superview
     }
 
     func windowWillResize(_ sender: NSWindow, to frameSize: NSSize) -> NSSize {
