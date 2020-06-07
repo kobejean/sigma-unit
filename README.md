@@ -3,6 +3,6 @@
 </p>
 
 ## Sigma Unit
-A minimalistic video/graphics player. Download [here](https://github.com/kobejean/sigma-unit/releases/download/latest/Sigma.Unit.pkg)
+A minimalistic video/graphics player. Download [here](https://github.com/kobejean/sigma-unit/releases/download/v1.0/Sigma.Unit.pkg)
 
 ![alt](docs/media/screenshot.png)
