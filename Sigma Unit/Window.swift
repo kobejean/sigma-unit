@@ -8,45 +8,33 @@
 
 import Cocoa
 
-class Window: NSWindow, NSWindowDelegate {
+class Window: NSWindow {
 
     // instance variables
-    override var appearance: NSAppearance? {
-        get { return NSAppearance(named: NSAppearance.Name.vibrantDark)}
-        set { super.appearance = NSAppearance(named: NSAppearance.Name.vibrantDark) }
-    }
     
-    override var canBecomeKey: Bool {
-        get { return true }
-    }
-    
-    override var canBecomeMain: Bool {
-        get { return true }
-    }
+    override var canBecomeKey: Bool { true }
+    override var canBecomeMain: Bool { true }
     
     override var contentView: NSView? {
-        get { return super.contentView }
+        get { super.contentView }
         set { super.contentView = newValue }
     }
-    override var acceptsFirstResponder: Bool { return true }
-    var isFullscreen: Bool { return self.styleMask.contains(NSWindow.StyleMask.fullScreen) }
+    override var acceptsFirstResponder: Bool { true }
+    var isFullscreen: Bool { self.styleMask.contains(.fullScreen) }
     var trackingArea: NSTrackingArea!
-    var titleBarHidden: Bool {
-        guard let view = self.standardWindowButtonSuperView() else {
-            return true
-        }
-        return view.alphaValue < 1
-    }
+    var titleBar: NSView? { standardWindowButton(.zoomButton)?.superview }
 
     // constructor
     override init(contentRect: NSRect, styleMask: NSWindow.StyleMask, backing: NSWindow.BackingStoreType, defer aDefer: Bool){
         super.init(contentRect: contentRect, styleMask: styleMask, backing: backing, defer: aDefer)
-        super.appearance = NSAppearance(named: NSAppearance.Name.vibrantDark)
         self.isMovableByWindowBackground = true
-        self.titleVisibility = NSWindow.TitleVisibility.hidden
+        self.titlebarAppearsTransparent = true
+        self.titleVisibility = .hidden
         self.setTitleBarHidden(hidden: true, animated: false)
         self.updateTrackingAreas()
-        self.delegate = self
+        NotificationCenter.default.addObserver(forName: NSWindow.didResizeNotification, object: nil, queue: nil, using: windowDidResize(_:))
+        NotificationCenter.default.addObserver(forName: NSWindow.willEnterFullScreenNotification, object: nil, queue: nil, using: windowWillEnterFullScreen(_:))
+        NotificationCenter.default.addObserver(forName: NSWindow.willExitFullScreenNotification, object: nil, queue: nil, using: windowWillExitFullScreen(_:))
     }
 
     // methods
@@ -66,61 +54,33 @@ class Window: NSWindow, NSWindowDelegate {
         }
     }
 
-    private func updateTrackingAreas(){
-        guard let titlebar = self.standardWindowButtonSuperView() else {
-            return
-        }
+    private func updateTrackingAreas() {
+        guard let titleBar = self.titleBar else { return }
 
-        let titleFrame = titlebar.frame
-        let trackingRect = CGRect(x: titleFrame.origin.x, y: titleFrame.origin.y,
-                                  width: titleFrame.width, height: 60.0)
+        var trackingRect = titleBar.frame
+        trackingRect.size.height = 60
 
-        if self.trackingArea != nil && titlebar.trackingAreas.contains(self.trackingArea){
-            titlebar.removeTrackingArea(self.trackingArea)
+        if self.trackingArea != nil && titleBar.trackingAreas.contains(self.trackingArea){
+            titleBar.removeTrackingArea(self.trackingArea)
         }
         self.trackingArea = NSTrackingArea(rect: trackingRect,
-                                           options: [NSTrackingArea.Options.mouseEnteredAndExited, NSTrackingArea.Options.activeInKeyWindow, NSTrackingArea.Options.activeAlways],
+                                           options: [.mouseEnteredAndExited, .activeInKeyWindow, .activeAlways],
                                            owner: self,
                                            userInfo: nil)
-        titlebar.addTrackingArea(self.trackingArea)
+        titleBar.addTrackingArea(self.trackingArea)
     }
 
     func setTitleBarHidden(hidden: Bool, animated: Bool = true) {
-        //https://stackoverflow.com/questions/28371381/nswindow-animate-show-hide-titlebar
-        guard let view = self.standardWindowButtonSuperView() else {
-            return
-        }
-        if hidden {
-            if view.alphaValue > 0.1 {
-                if !animated {
-                    view.alphaValue = 0
-                    return
-                }
-                view.animator().alphaValue = 0
-            }
-            return
-        } else {
-            if view.alphaValue < 1 {
-                if !animated {
-                    view.alphaValue = 1
-                    return
-                }
-                view.animator().alphaValue = 1
-            }
-        }
+        guard let titleBar = self.titleBar else { return }
+        let titleBarInterface = animated ? titleBar.animator() : titleBar
+        titleBarInterface.alphaValue = hidden ? 0 : 1
     }
-
-    func standardWindowButtonSuperView() -> NSView? {
-        //http://stackoverflow.com/a/28381918
-        return standardWindowButton(NSWindow.ButtonType.zoomButton)?.superview
-    }
-
-    func windowWillResize(_ sender: NSWindow, to frameSize: NSSize) -> NSSize {
+    
+    func windowDidResize(_ notification: Notification) {
         self.updateTrackingAreas()
-        return frameSize
     }
 
-    func windowDidExitFullScreen(_ notification: Notification) {
+    func windowWillExitFullScreen(_ notification: Notification) {
         setTitleBarHidden(hidden: true)
     }
 

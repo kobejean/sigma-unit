@@ -19,16 +19,14 @@ class FolderDocument: NSDocument {
         // Add your subclass-specific initialization here.
     }
     
-    override class var autosavesInPlace: Bool {
-        return false
-    }
+    override class var autosavesInPlace: Bool { false }
     
     override func makeWindowControllers() {
         // Returns the Storyboard that contains your Document window.
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
         let windowController = storyboard.instantiateController(withIdentifier: "PictureWindowController") as! NSWindowController
         self.addWindowController(windowController)
-        viewController = windowController.contentViewController as! PictureViewController
+        viewController = windowController.contentViewController as? PictureViewController
         
         guard let path = self.fileURL?.path else {
             Swift.print("no file")
@@ -41,7 +39,10 @@ class FolderDocument: NSDocument {
             latency: 0,
             flags: [.fileEvents, .ignoreSelf]) { event in
                 Swift.print(event)
-                if (event.flag ?? []).contains([.itemIsFile,.itemCreated]) {
+                let flag = event.flag ?? []
+                let fileCreatedFlag: FSEventUnofficialWrapperStreamEventFlags = [.itemIsFile, .itemCreated]
+                let fileRenamedFlag: FSEventUnofficialWrapperStreamEventFlags = [.itemIsFile, .itemRenamed]
+                if flag.contains(fileCreatedFlag) || flag.contains(fileRenamedFlag) {
                     let url = URL(fileURLWithPath:event.path)
                     self.viewController.loadURL(url)
                 }

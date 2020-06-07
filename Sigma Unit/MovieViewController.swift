@@ -20,12 +20,6 @@ class MovieViewController: NSViewController {
         playerView.player = AVPlayer()
     }
 
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
-    }
-
     /// Loads player item into player and plays it if autoplay is true.
     func loadPlayerItem(_ playerItem: AVPlayerItem, autoplay:Bool = false) {
         playerView.player?.replaceCurrentItem(with: playerItem)

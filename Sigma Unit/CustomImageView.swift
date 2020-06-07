@@ -10,6 +10,5 @@ import Cocoa
 import Quartz
 
 class CustomImageView: IKImageView {
-    override var mouseDownCanMoveWindow: Bool { return true }
-//    override var isOpaque: Bool { return false }
+    override var mouseDownCanMoveWindow: Bool { true }
 }

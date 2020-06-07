@@ -17,9 +17,7 @@ class MovieDocument: NSDocument {
         // Add your subclass-specific initialization here.
     }
     
-    override class var autosavesInPlace: Bool {
-        return false
-    }
+    override class var autosavesInPlace: Bool { false }
     
     override func makeWindowControllers() {
         // Returns the Storyboard that contains your Document window.
@@ -38,10 +36,7 @@ class MovieDocument: NSDocument {
         let playerItem = AVPlayerItem(asset: assetURL)
         viewController.loadPlayerItem(playerItem)
         
-        guard let window = windowController.window else {
-            return
-        }
-        guard let screen = window.screen else {
+        guard let window = windowController.window, let screen = window.screen else {
             return
         }
 

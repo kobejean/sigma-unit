@@ -11,7 +11,6 @@ import Quartz
 import CoreImage
 
 class PictureViewController: NSViewController {
-//    @IBOutlet var backImageView: CustomImageView!
     @IBOutlet var imageView: CustomImageView!
 
     override func viewDidLoad() {
