@@ -71,6 +71,7 @@
 		3D0D335B1F0FF1B9001F1566 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		3D0D33E61F102825001F1566 /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		3D11FE8E1F106B9C006689BE /* FSEventsUnofficialWrapper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FSEventsUnofficialWrapper.xcodeproj; path = "fsevents-unofficial-wrapper/FSEventsUnofficialWrapper.xcodeproj"; sourceTree = "<group>"; };
+		3D8C1D28248C79670037407E /* Sigma Unit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Sigma Unit.entitlements"; sourceTree = "<group>"; };
 		3DE0899E1F0970C40036F409 /* Window.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		3DF1094B1F08448600B1259C /* Sigma Unit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sigma Unit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DF1094E1F08448600B1259C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +128,7 @@
 		3DF1094D1F08448600B1259C /* Sigma Unit */ = {
 			isa = PBXGroup;
 			children = (
+				3D8C1D28248C79670037407E /* Sigma Unit.entitlements */,
 				3DF1094E1F08448600B1259C /* AppDelegate.swift */,
 				3DF109501F08448600B1259C /* MovieViewController.swift */,
 				3D0D33551F0FEDFC001F1566 /* PictureViewController.swift */,
@@ -186,6 +188,7 @@
 				TargetAttributes = {
 					3DF1094A1F08448600B1259C = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Q74A2VY23K;
 						LastSwiftMigration = 1130;
 						ProvisioningStyle = Automatic;
 					};
@@ -394,12 +397,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_ENTITLEMENTS = "Sigma Unit/Sigma Unit.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Q74A2VY23K;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Sigma Unit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "kobejean.sigma-unit";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kobejean.sigma-unit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -409,12 +417,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_ENTITLEMENTS = "Sigma Unit/Sigma Unit.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Q74A2VY23K;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Sigma Unit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "kobejean.sigma-unit";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kobejean.sigma-unit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
